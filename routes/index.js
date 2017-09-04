@@ -66,6 +66,17 @@ else{
     
 })
 
+router.get('/logout',function(req,res){
+    if(req.session.user){ 
+    req.session.user=null;
+    JwtToken.logout();
+    res.render('index');
+}
+
+    
+})
+
+
 // router.post('/sendMessage',function(req,res,next){
 // var id=req.body.id;
 // var message=req.body.message;
