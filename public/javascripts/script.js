@@ -343,6 +343,7 @@ app.controller("pingDataController", ['$scope','setPingData','$rootScope','$cook
                       }
                         else{
                             alert('Deleted Successfully');
+                            $window.location.href='/home'
                         }
                     })
                 
